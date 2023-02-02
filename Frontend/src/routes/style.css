@@ -1,20 +1,23 @@
 .navbar{
-    background-color: #4649FF;
+    /* background-color: #C47AFF; */
+    background-color: #d3d1d1;
+    /* background-color: #4649FF; */
     height: 80px;
     font-size: 15px;
     font-weight: 600;
-    color: white;
+    /* color: black; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .link{
-    color:white;
+    color:black;
     margin-right: 30px;
 }
 
 
 #responsible-navbar-nav{
-    background-color: #4649FF;
+    /* background-color: #C47AFF; */
+    background-color: #d3d1d1;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -23,6 +26,9 @@
     margin-right: auto;
 }
 
+.link:hover{
+    color:white;
+}
 /* 
 .navbar-container .navbar-nav .nav-link:hover {
     font-weight: bold;
@@ -31,9 +37,10 @@
 
 
 .auth{
-    background-color: #B1B2FF;
+    /* background-color:rgba(11, 11, 250, 0.4); */
+    background-color:#163e1dac;
     border-radius: 25px;
-    color: black;
+    color: white;
     font-weight: 600;
     margin-left: auto;
     margin-right: auto;
