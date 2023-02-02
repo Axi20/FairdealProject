@@ -1,12 +1,18 @@
 import React from "react";
 import HomePage from "../../pages/homepage";
-import './homePage.css';
+import Footer from "../Footer";
+import Effect from "./Effect";
+import GotoPage from "./GotoPage";
+import SpecialOffers from "./SpecialOffers";
 
 function HomeComponent() {
     return (
-        //    <HomePage/>
-   <HomePage/>
-
+       <section>
+            <Effect/>
+            <GotoPage/>
+            <SpecialOffers/>
+            <Footer/>
+       </section>
     );
 }
 
