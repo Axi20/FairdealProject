@@ -1,0 +1,203 @@
+
+
+.main{
+    background-image: url(https://cdn.discordapp.com/attachments/1042149414568984668/1070722822076383322/wp.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    /* background-attachment: fixed; */
+    background-size: cover;
+
+}
+
+.effect-external-div{
+    max-width: 800px;
+    width: 100%;
+    height: 100vh;
+    /* margin: 0 auto; */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* .effect-first-line{
+    font-size: 18px;
+    font-weight: 500;
+} */
+
+.effect-title{
+    font-size: 4rem;
+    font-weight: bold;
+    /* padding-top: 1.5rem; */
+}
+
+.effect-internal-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.effect-choice{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 1.5rem;
+}
+
+.effect-type{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 2rem;
+}
+
+.effect-last-line{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.effect-button{
+    width: 200px;
+    font-weight: 500;
+    margin: 24px auto;
+    padding: 12px;
+    color: #fff;
+    background-color: #1D1CE5;
+    color: white;
+    border-radius: 24px;
+   
+}
+
+.e-button{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    border: none;
+    height: 50px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color:#163e1dac;
+    text-decoration: none;
+}
+
+.e-button:hover{
+    background-color: #d3d1d1;
+    color: black;
+}
+
+.e-link{
+    text-decoration: none;
+    color: white;
+}
+
+.effect-button:hover{
+    background-color: #C47AFF;
+    color: white;
+}
+
+.logo-img{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.logo-title{
+    font-size: 40px;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #1B262C;
+    color: #fff;
+    height: min-content;
+    visibility: hidden;
+    padding-top: 10px;
+    opacity: 0;
+    transition: visibility 0s linear 0s, opacity 0.5s linear;
+    /* margin-top: 5rem; */
+    /* padding-top: 5rem; */
+    /* padding-bottom: 5rem; */
+}
+
+.footer--visible {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 0.5s linear;
+  }
+
+.copyright{
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer-link-title{
+    padding-right: 40px;
+    font-size: 14px;
+}
+
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .about-company{
+    width: 5rem;
+
+  }
+
+  @media (min-width: 992px) {
+    .col-lg-5 {
+      width: 41.66666667%;
+      float: left;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .col-xs-12 {
+      width: 100%;
+      float: left;
+    }
+  }
+
+  .pr5{
+    padding-right: 5rem;
+  }
+
+.text-white-50{
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    padding-left: 12px;
+    /* font-size: 20px; */
+}
+
+.f-link{
+    text-decoration: none;
+    color:#ffffff;
+    text-decoration: underline;
+    /* text-align: center; */
+    padding-left: 10px;
+}
+
+.f-link:hover{
+    color: #d3d1d1;
+}
+.hr-f{
+    color: #C47AFF;
+    border: 1.5px solid #ffffff;
+    /* margin-top: 30px; */
+}
+
+.f-logo{
+    width: 50%;
+}

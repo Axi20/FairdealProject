@@ -1,0 +1,49 @@
+.signup-external-div{
+    width: 100%;
+    background-image: url("./wp_02.jpg");
+    background-size: cover;
+    background-position: left;
+    background-attachment:scroll;
+    background-color: #1B262C;
+    margin-left: auto;
+    margin-right: auto;
+    height: 550px;
+    margin-top: 200px;
+}
+
+.signup-btn{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 0px;
+    width: 40%;
+    background-color: #24333b;
+    border-radius: 20px;
+    height: 50px;
+    color: #ffffff;
+}
+
+.text{
+    color: #d3d1d1;
+    font-size: 20px;
+    width: 40%;
+    float: right;
+    text-align: center;
+    margin-top: 40px;
+    padding-right: 25px;
+    margin-right: 60px;
+}
+
+.signup{
+    text-align: center;
+    font-size: 40px;
+    /* margin-right: 100px; */
+    margin-bottom: 50px;
+}
+
+.bcg-img{
+    /* background-image: url(https://cdn.discordapp.com/attachments/1042149414568984668/1069972650039971931/main_image.jpg); */
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
