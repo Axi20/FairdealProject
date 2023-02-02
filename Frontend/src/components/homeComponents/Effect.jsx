@@ -4,10 +4,8 @@ import './style/effect.css';
 
 
 const Effect = () => {
-    const abc = 1;
     return (
         <div className='main'>
-        
             <div className='effect-external-div'>
                 {/* <p className='effect-first-line'>SOK ÉVES TAPASZTALAT</p>                */}
                 <h1 className='effect-title'>Megfizethető árak és garantált minőség</h1>
