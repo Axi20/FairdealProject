@@ -24,18 +24,18 @@ const Footer = () => {
         <div className="container">
          <Row>
             <div className="col-lg-5 col-xs-12 about-company">
-              <img className="f-logo" src="https://cdn.discordapp.com/attachments/1042149414568984668/1070441372403900476/logo-removebg-preview.png" />
+              {/* <img className="f-logo" src="https://cdn.discordapp.com/attachments/1042149414568984668/1070441372403900476/logo-removebg-preview.png" /> */}
+              <p className="pr-5 text-white-50 logo-title">FairDeal</p>
               <p className="pr-5 text-white-50">Travel is adventure, and we are the key! </p>
             </div>
             <div className="col-lg-3 col-xs-12 links">
-              <h4 className="mt-lg-0 mt-sm-3">Linkek</h4>
+              <h4 className="mt-lg-0 mt-sm-3">Hivatkozások</h4>
                 <ul className="m-0 p-0">
-                  <li><a href="#" className='f-link'>Főoldal</a></li>
-                  <li><a href="#" className='f-link'>Autóink</a></li>
-                  <li><a href="#" className='f-link'>Regisztráció</a></li>
-                  <li><a href="#" className='f-link'>Adatvédelmi nyilatkozat</a></li>
-                  <li><a href="#" className='f-link'>Sütik</a></li>
-                  <li><a href="#" className='f-link'>ÁSZF</a></li>
+                  <ul><a href="#" className='f-link list'>Főoldal</a></ul>
+                  <ul><a href="#" className='f-link'>Autóink</a></ul>
+                  <ul><a href="#" className='f-link'>Adatvédelem</a></ul>
+                  <ul><a href="#" className='f-link'>Sütik</a></ul>
+                  <ul><a href="#" className='f-link'>ÁSZF</a></ul>
                 </ul>
             </div>
             <div className="col-lg-4 col-xs-12 location">
@@ -46,10 +46,10 @@ const Footer = () => {
             </div>
           </Row>
           <hr className='hr-f'></hr>
-          <div className="row mt-5">
-          <div className="col copyright">            
-            <p className=""><small className="text-white-50">Copyright &copy; {new Date().getFullYear()} FairDeal </small></p>
-          </div> 
+          <div>
+            <div className="copyright">            
+               <p className=""><small className="text-white-50">Copyright &copy; {new Date().getFullYear()} FairDeal </small></p>
+            </div> 
           </div>
         </div>
       </footer>
