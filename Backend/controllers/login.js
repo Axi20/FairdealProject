@@ -24,6 +24,8 @@ async function Userlogin(req, res) {
       }else {
         const db_user = results[0];
         const userID = db_user._id;
+        // const userID = db_user.customer_id;
+
 
          // Authenticate the user
         User.authenticate(email, password, (error, user) => {
@@ -34,6 +36,8 @@ async function Userlogin(req, res) {
         }
         // Generate a JWT and send it back to the client
         const token = jwt.sign({ _id: userID, iat: Date.now()}, process.env.JWT_KEY);
+        // const token = jwt.sign({ customer_id: userID, iat: Date.now()}, process.env.JWT_KEY);
+
         expiresIn: '1h' // expires in one hour
         return res.json({ token });
         });
