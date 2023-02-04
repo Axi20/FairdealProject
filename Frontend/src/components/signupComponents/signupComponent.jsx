@@ -1,9 +1,10 @@
 import React from "react";
+import Signup from "./signup";
 import './signupPage.css';
 
 function SignupComponent() {
     return (
-            <div>Regisztráció</div>
+           <Signup/>
     );
 }
 
