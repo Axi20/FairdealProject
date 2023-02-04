@@ -10,6 +10,9 @@ import TermsComponent from './components/termsComponents/termsComponent';
 import MainRoutes from './routes/Mainroute';
 import Navigation from './routes/Navbar';
 import { Route, Routes } from 'react-router-dom'
+import SignupComponent from './components/signupComponents/signupComponent';
+import RentComponent from './components/rentComponents/rentComponent';
+import ProfileComponent from './components/profileComponents/profileComponent';
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
         <Route path='/cars' element={<CarsComponent/>}/>
         <Route path='/terms' element={<TermsComponent/>}/>
         <Route path='/login' element={<LoginComponent/>}/>
+        <Route path='/registration' element={<SignupComponent/>}/>
+        <Route path="/rent/:id" element={<RentComponent />} />
+        <Route path="/user-profile" element={<ProfileComponent/>} />
      </Routes>
     </div>
   </BrowserRouter>
