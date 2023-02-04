@@ -1,12 +1,15 @@
 import React from "react";
-import LoginPage from "../../pages/loginPage";
 import './loginPage.css';
+import Login from "./loginPage";
+
+
 
 function LoginComponent() {
     return (
-        //  <LoginPage/>
-        <div>Oldal 5</div>
-
+        <section>
+            <Login/>
+            {/* <Footer/> */}
+        </section>
     );
 }
 
