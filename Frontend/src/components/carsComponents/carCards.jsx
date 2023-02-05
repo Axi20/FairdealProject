@@ -3,6 +3,8 @@ import React from 'react';
 import './carsPage.css';
 import Cols from 'react-bootstrap/Col';
 import Rows from 'react-bootstrap/Row';
+import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
 
 function checkLogin(){
   // Get the token from local storage
@@ -22,6 +24,7 @@ function checkLogin(){
 }
 
 const CarCards = (props) => {
+
   return (
         <div className='external-div-rent'>
             <div className='internal-div-rent'>
