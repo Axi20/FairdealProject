@@ -25,10 +25,10 @@ const Navigation = () => {
                     <Navbar.Collapse id='responsible-navbar-nav' >
                         <Nav >
                             <Nav.Link eventKey="2" className='link' href='/'>FŐOLDAL</Nav.Link>
-                            <Nav.Link  eventKey="2" className='link' href='/contact'>ELÉRHETŐSÉGEINK</Nav.Link>
+                            <Nav.Link  eventKey="2" className='link' href='/contact'>KAPCSOLAT</Nav.Link>
                             <Nav.Link eventKey="2" className='link' href='/about'>RÓLUNK</Nav.Link>
                             <Nav.Link eventKey="2" className='link' href='/cars'>AUTÓINK</Nav.Link>
-                            <Nav.Link eventKey="2" className='link' href='/terms'>ÁSZF</Nav.Link>
+                            {/* <Nav.Link eventKey="2" className='link' href='/terms'>ÁSZF</Nav.Link> */}
                             {isLoggedIn ? (
                                 <Nav.Link eventKey="2" href='/login'>KIJELENTKEZÉS</Nav.Link>
                             ) : (
