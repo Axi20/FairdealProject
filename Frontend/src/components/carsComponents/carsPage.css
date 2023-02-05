@@ -1,0 +1,78 @@
+.external-div-rent{
+    width: 60%;
+    margin-top: 100px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: rgb(201, 149, 149); */
+    /* height: 100px; */
+}
+
+.internal-div-rent{
+    /* max-width: 1000px; */
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px !important;
+    /* background-color: #c6c6c6; */
+}
+
+.card-rent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px;
+    border-collapse: collapse;
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+}
+
+.card-rent:hover {
+    transform: scale(1.05);
+  }
+  
+  .duration-300 {
+    transition-duration: 300ms;
+  }
+
+.image-rent{
+    margin-left: 5px;
+    width: 100%;
+    padding-top: 90px !important;
+    /* height: 70px; */
+
+}
+
+.data-div-rent{width: 100%;}
+
+.car-id-rent{visibility: hidden;}
+
+.brand-rent{
+    font-weight: bold;
+    padding-bottom: 1px;
+}
+
+.line-rent{background-color: #6C63FF;}
+
+.year-rent{padding-top: 2px;}
+
+.description-rent{padding-top: 2px;}
+
+.rent-btn-rent{
+    background-color:#163e1dac !important;
+    width: 200px;
+    color: white !important;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    border-radius: 20px;
+}

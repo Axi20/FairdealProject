@@ -1,12 +1,15 @@
 import React from "react";
 import CarsPage from "../../pages/carsPage";
+import CarCards from "./carCards";
+import Cars from "./cars";
 import './carsPage.css';
 
 function CarsComponent() {
     return (
-        // <CarsPage/>
-        <div>Oldal 2</div>
-
+      <section>
+        <Cars/>
+        <CarCards/>
+      </section>
     );
 }
 
