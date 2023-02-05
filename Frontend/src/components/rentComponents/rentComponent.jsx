@@ -1,9 +1,14 @@
 import React from "react";
+import RentPage from "./rent";
 import './rentPage.css';
+import Footer from "../Footer";
 
 function RentComponent() {
     return (
-            <div>Kölcsönzések</div>
+        <section>
+            <RentPage/>
+            <Footer/>
+        </section> 
     );
 }
 
