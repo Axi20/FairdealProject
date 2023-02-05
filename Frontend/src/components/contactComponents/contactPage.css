@@ -1,0 +1,81 @@
+body {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url(./reg_wp2.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow-x: hidden;  /* left to right scroll bar */
+    overflow-y:scroll; /* up to down scrollbar */
+  }
+  
+  .log-div {
+    background-color: rgba(0, 0, 0, 0.596);
+    border-radius: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+    height: max-content;
+    vertical-align: middle;
+    margin-bottom: 100px;
+    padding-bottom: 40px;
+  }
+  
+  .icon-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-2x {margin: 10px;}
+
+.log {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.open{
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url(./reg_wp2.jpg); */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+    #reg {
+      margin-top: 15px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    #reg-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    #log-div {
+      background-color: rgba(0, 0, 0, 0.596);
+      border-radius: 40px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 100px;
+      height: 320px;
+      vertical-align: middle;
+      margin-bottom: 100px;
+    }
+  }
