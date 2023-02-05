@@ -1,11 +1,13 @@
 import React from "react";
 import AboutPage from "../../pages/aboutPage";
+import About from "./about";
 import './aboutPage.css';
 
 function AboutComponent() {
     return (
-        //    
-        <div>Oldal 1</div>
+        <section>
+            <About/>
+        </section>
     );
 }
 
