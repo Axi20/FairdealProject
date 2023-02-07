@@ -13,6 +13,8 @@ import { Route, Routes } from 'react-router-dom'
 import SignupComponent from './components/signupComponents/signupComponent';
 import RentComponent from './components/rentComponents/rentComponent';
 import ProfileComponent from './components/profileComponents/profileComponent';
+import RentFormPage from './pages/rentFormPage';
+import RentFormComponent from './components/rentFormComponents/rentFormComponent';
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
         <Route path='/registration' element={<SignupComponent/>}/>
         <Route path="/rent/:id" element={<RentComponent />} />
         <Route path="/user-profile" element={<ProfileComponent/>} />
+        <Route path="/rent-car/:id" element={<RentFormComponent/>} />
      </Routes>
     </div>
   </BrowserRouter>
