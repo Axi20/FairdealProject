@@ -7,12 +7,39 @@ import { Marker, Popup } from 'react-leaflet';
 import { divIcon } from 'leaflet';
 import { useMap } from 'react-leaflet/hooks'
 import './rentPage.css';
+import { useNavigate } from 'react-router-dom';
+import jwtDecode from 'jwt-decode';
+import RentFormPage from '../rentFormComponents/rentForm.jsx';
 // import '../../index.css';
 
+function checkLogin(){
+    // Get the token from local storage
+    const token = localStorage.getItem("jwt");
+    if (!token) {
+      // No token is present, the user is not logged in
+      console.log('Not logged in');
+      window.location.href = '/login';
+    } else {
+      // Token is present, the user is logged in
+      console.log('Logged in');
+    //   window.location.assign('/rent');
+      // Parse the token to get the user's ID or other information
+      const payload = jwtDecode(token)
+      console.log(`User ID: ${payload._id}`);
+      
+    }
+  }
 
 const RentPage = (props) => {
+
+
         const { id } = useParams();
-        const [car, setCar] = useState({});
+        // const [car, setCar] = useState({});
+        const navigate = useNavigate();
+
+        const handleClick = () => {
+            navigate(`/rent-car/${id}`);
+          };
 
         const myIcon = divIcon({
             className: 'my-div-icon',
@@ -48,7 +75,7 @@ const RentPage = (props) => {
                                         <p><li>{car.engine_size} cm<sup>3</sup> {car.horsepower} LE</li></p>
                                         <p className='car-description-p'>{car.description}</p>
                                         <p className='car-data-price'>Napi ár: {car.price} FT</p>
-                                        <button type="submit" className='car-data-rent-button'>Bérlés</button>
+                                        <button type="submit"  onClick={handleClick}  className='car-data-rent-button'>Bérlés</button>
                                     </div>
                                 </div>
                                 <div className=''>
@@ -119,6 +146,7 @@ const RentPage = (props) => {
                                 </div>
                                 <div className='pb-10'>
                                     <img className='rent-place-img' src="https://img.freepik.com/free-vector/city-skyline-concept-illustration_114360-8923.jpg?w=1380&t=st=1674032152~exp=1674032752~hmac=0352fa7d33e1d48a71d5325ea9496777948eb9e6920d6677e5e4273c6f957516"></img>
+                               
                                 </div>
                             </div>
                     </div>
