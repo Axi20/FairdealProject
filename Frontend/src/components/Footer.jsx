@@ -2,7 +2,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-
+// import './footer.css';
+import './footer.css';
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
