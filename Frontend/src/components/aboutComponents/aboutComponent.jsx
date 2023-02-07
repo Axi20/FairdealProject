@@ -1,12 +1,14 @@
 import React from "react";
-import AboutPage from "../../pages/aboutPage";
 import About from "./about";
-import './aboutPage.css';
+import Footer from "../Footer";
+import '../footer.css';
+
 
 function AboutComponent() {
     return (
         <section>
             <About/>
+            <Footer/>
         </section>
     );
 }
