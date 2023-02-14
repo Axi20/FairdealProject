@@ -24,13 +24,13 @@ const GotoPage = () => {
         <div className='signup-external-div'>
         
             <div>
-                <p className='text'>
+                <div className='text'>
                 <h1 className='signup'>Regisztráljon még ma!</h1>
                  Hogy könnyen és gyorsan élvezni tudja az általunk kínált szolgáltatásokat.
                  Elege van a hosszan tartó ügyintézésből és a vele járó papírmunkából?<br></br><br></br>Weboldalunk használatával mostantól csak egy kattintás az autó bérlés!
                  Az otthon kényelméből tudja böngészni elérhető autóinkat, amit akár házhoz is viszünk a háztól-házig szolgáltatásunk keretén belül.<br></br><br></br>       
                 <a className='e-link' href="/registration"><button className='signup-btn'>Regisztráció</button></a>
-                </p>
+                </div>
             </div>
         </div>
     )

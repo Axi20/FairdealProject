@@ -23,8 +23,8 @@ async function Userlogin(req, res) {
         console.log(error);
       }else {
         const db_user = results[0];
-        const userID = db_user._id;
-        // const userID = db_user.customer_id;
+        // const userID = db_user._id;
+        const userID = db_user.customer_id;
 
 
          // Authenticate the user

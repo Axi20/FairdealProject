@@ -1,5 +1,6 @@
 import React from "react";
 import './loginPage.css';
+import jwtDecode from 'jwt-decode';
 import { useState } from "react"
 
 const Login = () => {
@@ -37,9 +38,18 @@ const Login = () => {
                       console.log("Login success \n Token generated success");
                     //   setIsLoggedIn(true);
                       localStorage.setItem('jwt', data.token);
-          
+                      const payload = jwtDecode(data.token);
+                      console.log(`User ID: ${payload._id}`);
+                      const userID = localStorage.setItem("ID", payload._id);
+                    
+                      // setIsLoggedIn(true);
+                      localStorage.setItem('isLoggedIn', true);
+
+                      // TODO setIsLoggedIn
+
+                      
                       alert("Sikeresen bejelentkezett az oldalra!")
-                      window.location.href = '/'
+                      // window.location.href = '/'
                       // redirect the user to the dashboard               
                     }
                   });

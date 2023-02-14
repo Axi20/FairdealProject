@@ -8,9 +8,9 @@ import './carsPage.css';
 function CarsComponent() {
     return (
       <section>
-        <Search/>
+        {/* <Search/> */}
         <Cars/>
-        <CarCards/>
+        {/* <CarCards/> */}
       </section>
     );
 }

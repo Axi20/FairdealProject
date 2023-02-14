@@ -10,6 +10,8 @@ import './rentPage.css';
 import { useNavigate } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import RentFormPage from '../rentFormComponents/rentForm.jsx';
+import { useSelector, useDispatch } from 'react-redux'
+import { addData } from '../../redux/countreSlice';
 // import '../../index.css';
 
 function checkLogin(){
@@ -26,19 +28,35 @@ function checkLogin(){
       // Parse the token to get the user's ID or other information
       const payload = jwtDecode(token)
       console.log(`User ID: ${payload._id}`);
+      const userID = localStorage.setItem("ID", payload._id);
       
     }
   }
 
 const RentPage = (props) => {
 
-
+    const count = useSelector((state) => state.counter.carData)
+    const dispatch = useDispatch()
         const { id } = useParams();
-        // const [car, setCar] = useState({});
+        const [car, setCar] = useState({});
         const navigate = useNavigate();
 
         const handleClick = () => {
+            // Get the token from local storage
+            const token = localStorage.getItem("jwt");
+            if (!token) {
+            // No token is present, the user is not logged in
+            console.log('Not logged in');
+            window.location.href = '/login';
+            } else {
+            // Token is present, the user is logged in
+            console.log('Logged in');
             navigate(`/rent-car/${id}`);
+            //   window.location.assign('/rent');
+            // Parse the token to get the user's ID or other information
+            const payload = jwtDecode(token)
+            console.log(`User ID: ${payload._id}`);
+            }
           };
 
         const myIcon = divIcon({
@@ -52,6 +70,7 @@ const RentPage = (props) => {
             const response = await fetch(`http://127.0.0.1:8080/cars/${id}`);
             const data = await response.json();
             setCar(data);
+            dispatch(addData(data), id);
           }
           fetchData();
         }, [id]);

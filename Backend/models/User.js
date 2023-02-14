@@ -76,6 +76,20 @@ class User {
     });
   }
 
+  //Method to retrieve a user record from the database by id
+  // Method to retrieve a user record from the database by id
+  findById(id, callback) {
+    const sql = 'SELECT * FROM customers WHERE customer_id = ?';
+    const values = [id];
+    conn.query(sql, values, (err, rows) => {
+      if (err) {
+        console.error('Error executing SELECT: ' + err.stack);
+        return;
+      }
+     callback(rows[0]);
+    });
+  }
+
   static authenticate = (email, password, callback) => {
     // Replace this with your own SQL query
     const sql = `SELECT * FROM customers WHERE email = ?`;

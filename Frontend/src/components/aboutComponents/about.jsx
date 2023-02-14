@@ -17,7 +17,7 @@ const About = () => {
     return(
         <div className="about-flex-div">
             <div className=' about-external-div'>
-            <img src={Logo} className="ab-logo" />
+            {/* <img src={Logo} className="ab-logo" /> */}
                     <div className='about-data-external-div'>
                  
                         <div className='about-flex-div'>

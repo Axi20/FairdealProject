@@ -2,6 +2,8 @@ const express = require('express');
 const registration = require('./routes/user')
 const Userlogin = require('./routes/login');
 const carsRoutes = require('./routes/cars');
+const rentRoutes = require('./routes/rents');
+const rentModel = require('./models/rent');
 const app = express();
 app.use(express.json());
 
@@ -10,6 +12,7 @@ app.use(express.json());
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', '*');
+  res.header('Access-Control-Allow-Methods', 'PUT, POST, GET');
   next();
 });
 
@@ -18,6 +21,7 @@ app.use((req, res, next) => {
 app.use(registration);
 app.use(Userlogin);
 app.use('/cars', carsRoutes);
+app.use(rentRoutes);
 
 // app.use('/registration', registration);
 // app.use('/login', login);
