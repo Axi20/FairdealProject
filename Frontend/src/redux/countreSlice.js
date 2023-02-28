@@ -2,7 +2,9 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   carData: {},
-  userData: {},
+  userData: {
+    IsLoggedIn: false
+  },
 }
 
 export const counterSlice = createSlice({

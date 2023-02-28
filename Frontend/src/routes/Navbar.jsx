@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { NavLink, Link } from 'react-router-dom';
+import {useSelector, useDispatch} from 'react-redux';
+
 import { Navbar, Nav, Container } from 'react-bootstrap';
+
 import './style.css'
 
 
 const Navigation = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-    useEffect(() => {
-        const lin = localStorage.getItem("isLoggedIn");
-        setIsLoggedIn(lin);
-        console.log(lin);
-    }, []);
+    const isLoggedIn = useSelector(state => state.counter.userData.IsLoggedIn);
     
     const [nav, setNav] = useState(false)
     const handleNav = () => {

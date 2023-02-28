@@ -4,6 +4,8 @@ import './rentFormPage.css';
 import { Form, Row, Col } from "react-bootstrap";
 import { useSelector } from 'react-redux'
 
+
+
 const RentFormPage = () => {
     const count = useSelector((state) => state.counter.carData)
     const [rentedDays, setRentedDays] = useState(1)
@@ -49,10 +51,42 @@ const RentFormPage = () => {
         .then((data) => console.log(data))
         .catch((error) => console.error(error));
         
-        alert("Sikeres bérlés!");
-        // window.location.href = '/';
+      // Send the email using the server-side sendConfirmationEmail function
+      const rentalStartDate = new Date().toISOString().slice(0, 10); // Get the current date as the rental start date
+      const rentalDays = parseInt(formData.rentedDays);
+      const rentalEndDate = new Date(Date.parse(rentalStartDate) + (rentalDays * 24 * 60 * 60 * 1000)).toISOString().slice(0, 10); // Calculate the end rental date based on the rental start date and rental days
+      const sendConfirmationEmail = (email, name, carName, carPlateNumber, carModel, carYear, rentalStart, rentalEnd, finalPrice, office, phoneNumber, contactEmail) => {
 
-    }
+        fetch(`http://127.0.0.1:8080/send-confirmation-email`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email,
+                name,
+                carName,
+                carPlateNumber,
+                carModel,
+                carYear,
+                rentalStart,
+                rentalEnd,
+                finalPrice,
+                office,
+                phoneNumber,
+                contactEmail
+            })
+            
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+    };
+    // Call the sendConfirmationEmail function with the required parameters
+    sendConfirmationEmail(formData.userEmail, formData.userName, count.brand, count.plate_number, count.model, count.year, rentalStartDate, rentalEndDate, price, "Szeged", "123456789", "contact@example.com");
+    alert("Sikeres bérlés!");
+        // window.location.href = '/';
+}
 
   return (
     <section>

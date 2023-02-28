@@ -1,10 +1,14 @@
 import React from "react";
 import './loginPage.css';
 import jwtDecode from 'jwt-decode';
-import { useState } from "react"
+import { useState } from "react";
+import {useSelector, useDispatch} from 'react-redux';
+import { addUserData } from "../../redux/countreSlice";
 
 const Login = () => {
-
+  // const belep = useSelector(state => state.userData.IsLoggedIn);
+    // const [isLoggedIn, setIsLoggedIn] = useState(belep);
+    const dispatch = useDispatch();
     const [error, setError] = useState('');
 
     function handleSubmit(event) {
@@ -36,6 +40,10 @@ const Login = () => {
                     if (data.token) {
                       // Save the token to the local storage
                       console.log("Login success \n Token generated success");
+                      alert("Sikeresen bejelentkezett az oldalra!");
+                      window.location.href = '/'
+
+
                     //   setIsLoggedIn(true);
                       localStorage.setItem('jwt', data.token);
                       const payload = jwtDecode(data.token);
@@ -44,12 +52,15 @@ const Login = () => {
                     
                       // setIsLoggedIn(true);
                       localStorage.setItem('isLoggedIn', true);
+                      
+                      // setIsLoggedIn(true);
+                      dispatch(addUserData({IsLoggedIn: true}));
 
                       // TODO setIsLoggedIn
 
                       
-                      alert("Sikeresen bejelentkezett az oldalra!")
-                      // window.location.href = '/'
+                      alert("Sikeresen bejelentkezett az oldalra!");
+                      window.location.href = '/'
                       // redirect the user to the dashboard               
                     }
                   });

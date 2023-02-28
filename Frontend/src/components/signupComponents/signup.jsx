@@ -36,6 +36,8 @@ const Signup = () => {
                 }
                 const user = await res.json();
                 console.log('Successfully created user: ', user);
+                alert("Sikeres regisztráció!")
+                window.location.href = '/login'
             } catch (err) {
                 if (err.message === "Bad Request") {
                     setEmailError("A megadott email cím már használatban van!");
