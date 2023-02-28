@@ -4,6 +4,7 @@ const Userlogin = require('./routes/login');
 const carsRoutes = require('./routes/cars');
 const rentRoutes = require('./routes/rents');
 const rentModel = require('./models/rent');
+const { sendConfirmationEmail } = require('./sendEmail');
 const app = express();
 app.use(express.json());
 
@@ -25,6 +26,22 @@ app.use(rentRoutes);
 
 // app.use('/registration', registration);
 // app.use('/login', login);
+
+app.post('/send-confirmation-email', async (req, res) => {
+  // Call the sendConfirmationEmail function here
+  try {
+    // Get the necessary data from the request body
+    const { email, name, carName, carPlateNumber, carModel, carYear, rentalStart, rentalEnd, finalPrice, office, phoneNumber, contactEmail } = req.body;
+
+    // Call the sendConfirmationEmail function with the necessary arguments
+    await sendConfirmationEmail(email, name, carName, carPlateNumber, carModel, carYear, rentalStart, rentalEnd, finalPrice, office, phoneNumber, contactEmail);
+
+    res.status(200).json({ message: 'Confirmation email sent successfully' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Failed to send confirmation email' });
+  }
+});
 
 // Set the port number using the PORT environment variable
 const port = process.env.PORT || 8080;
