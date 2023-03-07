@@ -6,12 +6,15 @@ import {useSelector, useDispatch} from 'react-redux';
 import { addUserData } from "../../redux/countreSlice";
 
 const Login = () => {
-  // const belep = useSelector(state => state.userData.IsLoggedIn);
+  const isLoggedIn = useSelector(state => state.counter.userData.IsLoggedIn);
+  console.log(isLoggedIn);
     // const [isLoggedIn, setIsLoggedIn] = useState(belep);
+
     const dispatch = useDispatch();
     const [error, setError] = useState('');
 
     function handleSubmit(event) {
+
         event.preventDefault()
         const formData = new FormData(event.target);
         const email = formData.get('email');
@@ -40,8 +43,8 @@ const Login = () => {
                     if (data.token) {
                       // Save the token to the local storage
                       console.log("Login success \n Token generated success");
-                      alert("Sikeresen bejelentkezett az oldalra!");
-                      window.location.href = '/'
+                      // alert("Sikeresen bejelentkezett az oldalra!");
+                      // window.location.href = '/'
 
 
                     //   setIsLoggedIn(true);
@@ -54,7 +57,7 @@ const Login = () => {
                       localStorage.setItem('isLoggedIn', true);
                       
                       // setIsLoggedIn(true);
-                      dispatch(addUserData({IsLoggedIn: true}));
+                      dispatch(addUserData());
 
                       // TODO setIsLoggedIn
 

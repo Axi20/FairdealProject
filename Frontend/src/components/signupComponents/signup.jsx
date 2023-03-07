@@ -19,6 +19,7 @@ const Signup = () => {
              // Password validation
             if (!/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/.test(password)) {
                 setPasswordError("A jelszónak legalább 8 karakterből kell állnia, \n tartalmaznia kell nagybetűt, kisbetűt, számot és speciális karaktert!");
+                alert("A jelszónak legalább 8 karakterből kell állnia és tartalmaznia kell kisbetűt, nagybetűt, számot és speciális karaktert!")
             return;
     }
 
@@ -38,12 +39,15 @@ const Signup = () => {
                 console.log('Successfully created user: ', user);
                 alert("Sikeres regisztráció!")
                 window.location.href = '/login'
+
             } catch (err) {
                 if (err.message === "Bad Request") {
                     setEmailError("A megadott email cím már használatban van!");
+                    alert("A megadott email cím már használatban van!")
                 } else {
                     console.log('Error creating user: ', err);
                     setError("Hiba történt a regisztráció közben, kérjük próbálja meg újra!");
+                    alert("Hiba történt, kérjük próbálja meg újra!")
                 }
             }
         }

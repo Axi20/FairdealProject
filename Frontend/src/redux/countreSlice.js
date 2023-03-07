@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   carData: {},
   userData: {
-    IsLoggedIn: false
+    IsLoggedIn: true
   },
 }
 
@@ -13,12 +13,11 @@ export const counterSlice = createSlice({
   reducers: {
     addData: (state, action) => {
         state.carData = action.payload;
-    } 
-  },
-  addUserData: (state, action) => {
-    state.userData = action.payload;
+    },
+  addUserData: (state) => {
+    state.userData.IsLoggedIn = !state.userData.IsLoggedIn;
 }
-})
+}})
 
 export const {addData, addUserData } = counterSlice.actions
 

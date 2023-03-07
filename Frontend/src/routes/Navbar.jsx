@@ -1,19 +1,43 @@
 import React, { useEffect, useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 import './style.css'
+import { addUserData } from '../redux/countreSlice';
 
 
 const Navigation = () => {
     const isLoggedIn = useSelector(state => state.counter.userData.IsLoggedIn);
-    
+    const dispatch = useDispatch();
+    console.log(isLoggedIn);
+
+//    const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+//    useEffect(() => {
+//      const lin = localStorage.getItem("isLoggedIn");
+ //       setIsLoggedIn(lin);
+  //      console.log(lin);
+ //   }, []);
+
     const [nav, setNav] = useState(false)
     const handleNav = () => {
         setNav(!nav);
+    };
+
+    const logout = () => {
+        dispatch(addUserData());
+        if (confirm("Biztosan kijelentkezik?")) {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem("jwt");
+          } else {
+            // window.close();
+          }
+        // localStorage.removeItem('isLoggedIn');
+        // localStorage.removeItem("jwt");
+        //navigate('/');
     };
 
 
@@ -33,9 +57,9 @@ const Navigation = () => {
                             <Nav.Link eventKey="2" className='link' href='/about'>RÓLUNK</Nav.Link>
                             <Nav.Link eventKey="2" className='link' href='/cars'>AUTÓINK</Nav.Link>
                             {/* <Nav.Link eventKey="2" className='link' href='/terms'>ÁSZF</Nav.Link> */}
-                            {console.log("ár" + isLoggedIn)}
+                            {/* {console.log("ár" + isLoggedIn)} */}
                             {isLoggedIn ? (
-                                <Nav.Link eventKey="2" to='/login'>KIJELENTKEZÉS</Nav.Link>
+                                <Nav.Link eventKey="2" onClick={() => logout()}>KIJELENTKEZÉS</Nav.Link>
                             ) : (
                                 <Nav.Link eventKey="2" className="auth" href='/registration'>REGISZTRÁCIÓ</Nav.Link>
                             )}
