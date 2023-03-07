@@ -76,3 +76,65 @@
     font-weight: 500;
     border-radius: 20px;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+
+    body{
+        padding-bottom: 150px;
+    }
+
+    .external-div-rent {
+    width: 90%;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-top: 0;
+    }
+    
+    .card-rent {
+    /* grid-template-columns: 1fr; */
+    /* grid-gap: 8px; */
+    padding: 8px;
+    margin-top: 80px;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .internal-div-rent{
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 300px !important;
+    }
+    .image-rent {
+    padding-top: 60px !important;
+    }
+    
+    .brand-rent {
+    font-size: 1.2rem;
+    }
+    
+    .line-rent {
+    height: 2px;
+    width: 50%;
+    margin: 8px auto;
+    }
+    
+    .year-rent {
+    font-size: 0.9rem;
+    padding-top: 1rem;
+    }
+    
+    .description-rent {
+    display: none;
+    }
+    
+    .rent-btn-rent {
+    width: 150px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    }
+}
